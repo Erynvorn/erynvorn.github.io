@@ -11,7 +11,7 @@ layout: feed
 	<id>http://erynvorn.github.io/blog</id>
 	<author>
 		<name>Eryn Vorn</name>
-		<email>daniel.seite888@gmail.com</email>
+		<email>eryn.vorn@gmail.com</email>
 	</author>
 
 	{% for post in site.posts %}
