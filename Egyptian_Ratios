@@ -1,0 +1,5 @@
+<form>
+  Insert your fraction or decimal:<br>
+  <input type="text" name="ratio" value="fraction"><br>
+  <input type="submit" value="Submit">
+</form>
