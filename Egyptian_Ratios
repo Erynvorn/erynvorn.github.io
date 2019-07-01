@@ -1,5 +1,42 @@
-<<form>
-  Insert your fraction or decimal:<br>
-  <input type="text" name="ratio" value="fraction"><br>
-  <input type="submit" value="Submit">
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Egyptian Fractions
+    </title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>
+        <p> Insert a fraction or real number and obtain its Egyptian Fraction !</p>
+    </h1>
+    <!-- <img src=https://upload.wikimedia.org/wikipedia/commons/d/d9/Rhind_Mathematical_Papyrus.jpg />  -->
+    <p> Please insert a real (0.47) or a fraction (3/4) and submit !</p>
+
+    <div class = "example">
+        <p> Some examples: </p>
+        
+        <ul>
+            <li>0.47 = 1/3 + 1/8 + 1/86 + 1/25800</li>
+            <li>3/4 = 1/2 + 1/4</li>
+            <li>3.14159 = 3 + 1/8 + 1/61 + 1/5361 + 1/39978118 + 1/2494977886732443</li>
+        </ul>
+    </div>      
+
+    <form class="input-form">
+        Ratio<br>
+        <input type="text" name="Ratio" id="EgyptianFraction"><br/>
+        <button onclick="decompose()">Submit !</button>
+    </form>
+    <br/>
+    <p id="Answer"> Ratio will be here</p>
+
+    <div class="external links">
+        <p>On Wikipedia: <a href=https://en.wikipedia.org/wiki/Egyptian_fraction>  https://en.wikipedia.org/wiki/Egyptian_fraction</a></p>
+        <p>On Wolfram: <a href=http://mathworld.wolfram.com/EgyptianFraction.html> http://mathworld.wolfram.com/EgyptianFraction.html</a></p>
+    </div>
+    
+</body>
+
+
+</html>
