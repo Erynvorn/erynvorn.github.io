@@ -1,13 +1,6 @@
-function addon() {
-    console.log("Hello");
-    var a = document.getElementById('EgyptianFraction').value;
-    a = a + a;
-    console.log(a);
-    alert(a);
-}
-
 function decompose() {
     var n = document.getElementById('EgyptianFraction').value;
+    var ninput = n;
     var pos = n.indexOf("/");
     var l = n.length;
     var nu ="";
@@ -38,6 +31,29 @@ function decompose() {
       den = Math.pow(10,l - pospoint -1 );
       console.log(l + '  ' + pospoint + "  "+ mul + "  " + nu + "  "+ den);
     }
+     if (num === 0) { return ret } else {
+       if (num >= den ) {ret =[String(Math.floor(num/den))]; } else {
+       
+       while (num > 0) { 
+         ret [i]= "1/"+String(Math.ceil(den/num));
+         i++;
+          console.log(ret);
+          Newnum = num * Math.ceil(den/num) - den;
+          Newden = den * Math.ceil(den/num);
+          num = Newnum;
+          den = Newden;
+          console.log(num + "  " + den);
+         }
+       }
+     }
+     let returnData = String(ninput) + " = ";
+     for (i=0;i<ret.length-1;i++){
+        returnData = returnData + String(ret[i]) + " + ";
+     }
+     returnData = returnData + ret[ret.length-1];
+     document.getElementById('Answer').innerText=returnData;
+     event.preventDefault();
+}
      if (num === 0) { return ret } else {
        if (num >= den ) {ret =[String(Math.floor(num/den))]; } else {
        
