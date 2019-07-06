@@ -54,23 +54,5 @@ function decompose() {
      document.getElementById('Answer').innerText=returnData;
      event.preventDefault();
 }
-     if (num === 0) { return ret } else {
-       if (num >= den ) {ret =[String(Math.floor(num/den))]; } else {
-       
-       while (num > 0) { 
-         ret [i]= "1/"+String(Math.ceil(den/num));
-         i++;
-          console.log(ret);
-          Newnum = num * Math.ceil(den/num) - den;
-          Newden = den * Math.ceil(den/num);
-          num = Newnum;
-          den = Newden;
-          console.log(num + "  " + den);
-         }
-       }
-     }
-     document.getElementById('Answer').innerText=ret;
-     event.preventDefault();
-}
 
     
